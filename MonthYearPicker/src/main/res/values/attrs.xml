@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="monthPickerDialog">
+        <attr name="titleColor" format="color" />
+
+        <attr name="dayPickerActive" format="color" />
+        <attr name="dayPickerInActive" format="color" />
+        <attr name="yearPickerActive" format="color" />
+        <attr name="yearPickerInActive" format="color" />
+
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerBackgroundColor" format="color" />
+
+
+        <attr name="negativeTextColor" format="color" />
+        <attr name="positiveTextColor" format="color" />
+
+    </declare-styleable>
+</resources>
