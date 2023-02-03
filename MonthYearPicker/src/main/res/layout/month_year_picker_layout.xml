@@ -26,7 +26,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/contentContainer"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
+        android:background="?backgroundColor"
+        android:paddingVertical="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +48,7 @@
             android:id="@+id/monthSpinner"
             android:layout_width="0dp"
             android:layout_height="200dp"
+            android:background="@android:color/transparent"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -98,6 +101,7 @@
             android:padding="5dp"
             android:text="Cancel"
             android:textColor="?negativeTextColor"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/positiveActionTextView"
             app:layout_constraintTop_toTopOf="parent" />
@@ -110,6 +114,7 @@
             android:padding="5dp"
             android:text="Okay"
             android:textColor="?positiveTextColor"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
