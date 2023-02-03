@@ -59,3 +59,13 @@ To customize the picker style
         <item name="negativeTextColor">?colorPrimary</item>
         <item name="positiveTextColor">?colorPrimary</item>
 ```
+
+## Installation
+
+```gradle
+
+dependencies {
+	        implementation 'com.github.azikar24:MonthYearPicker:Tag'
+	}
+	
+```
