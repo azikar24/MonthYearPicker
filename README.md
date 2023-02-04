@@ -68,7 +68,7 @@ allprojects {
 }
 	
 dependencies {
-    implementation 'com.github.azikar24:MonthYearPicker:1.0'
+    implementation 'com.github.azikar24:MonthYearPicker:1.0.0'
 }
 	
 ```
