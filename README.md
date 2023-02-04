@@ -41,14 +41,20 @@ To customize the picker style
 
 ```xml
 
-<item name="backgroundColor">?colorSurface</item><item name="titleColor">?colorOnBackground</item>
+<item name="backgroundColor">?colorSurface</item>
+<item name="titleColor">?colorOnBackground</item>
 
-<item name="dayPickerActive">?colorOnSecondary</item><item name="dayPickerInActive">?colorOnBackground</item><item name="yearPickerActive">?colorOnSecondary</item><item name="yearPickerInActive">?colorOnBackground</item>
+<item name="dayPickerActive">?colorOnSecondary</item>
+<item name="dayPickerInActive">?colorOnBackground</item>
+<item name="yearPickerActive">?colorOnSecondary</item>
+<item name="yearPickerInActive">?colorOnBackground</item>
 
 
-<item name="dividerColor">?colorSecondary</item><item name="dividerBackgroundColor">?colorSecondary</item>
+<item name="dividerColor">?colorSecondary</item>
+<item name="dividerBackgroundColor">?colorSecondary</item>
 
-<item name="negativeTextColor">?colorPrimary</item><item name="positiveTextColor">?colorPrimary</item>
+<item name="negativeTextColor">?colorPrimary</item>
+<item name="positiveTextColor">?colorPrimary</item>
 ```
 
 ## Installation
