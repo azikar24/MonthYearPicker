@@ -1,6 +1,7 @@
 package com.azikar24.monthyearpicker
 
 import android.content.Context
+import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -30,6 +31,7 @@ class MonthYearPicker(builder: Builder) {
     private val callback: OnSelected?
     private val callbackNatural: OnSelectedNatural?
     private val lifecycleOwner: LifecycleOwner?
+    private val typeFace: Typeface?
 
 
     init {
@@ -45,6 +47,7 @@ class MonthYearPicker(builder: Builder) {
         callback = builder.callback
         callbackNatural = builder.callbackNatural
         lifecycleOwner = builder.lifecycleOwner
+        typeFace = builder.typeFace
         viewModel = ViewModelProvider(context as ViewModelStoreOwner)[MonthYearPickerViewModel::class.java]
     }
 
@@ -65,6 +68,7 @@ class MonthYearPicker(builder: Builder) {
 
         binding = MonthYearPickerLayoutBinding.inflate(LayoutInflater.from(context))
         title?.let {
+            binding.titleTextView.typeface = typeFace
             binding.titleTextView.visibility = View.VISIBLE
             binding.titleTextView.text = title
         }
@@ -81,11 +85,13 @@ class MonthYearPicker(builder: Builder) {
     }
 
     private fun setupButtons(dialog: AlertDialog) {
+        binding.positiveActionTextView.typeface = typeFace
         binding.positiveActionTextView.setOnClickListener {
             callback?.onSelected(binding.yearSpinner.value, binding.monthSpinner.value % 12)
             callbackNatural?.onSelectedNatural(binding.yearSpinner.value, (binding.monthSpinner.value % 12) + 1)
             dialog.dismiss()
         }
+        binding.negativeActionTextView.typeface = typeFace
         binding.negativeActionTextView.setOnClickListener {
             dialog.dismiss()
         }
@@ -102,6 +108,9 @@ class MonthYearPicker(builder: Builder) {
 
         picker.minValue = minValue
         picker.maxValue = maxValue
+
+        picker.typeface = typeFace
+        picker.setSelectedTypeface(typeFace)
     }
 
     private fun setupYears(minCalendar: Calendar, maxCalendar: Calendar, selectedDate: Calendar) {
@@ -207,9 +216,14 @@ class MonthYearPicker(builder: Builder) {
         var callback: OnSelected? = null
         var callbackNatural: OnSelectedNatural? = null
         var lifecycleOwner: LifecycleOwner? = null
+        var typeFace: Typeface? = null
 
         fun setStyle(style: Int) = apply {
             this.themeMonthYearPicker = style
+        }
+
+        fun setTypeFace(typeFace: Typeface?) = apply {
+            this.typeFace = typeFace
         }
 
         fun setTitle(title: String) = apply {
